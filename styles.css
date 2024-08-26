@@ -1,0 +1,132 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* 헤더 스타일 */
+.header {
+    background-color: #5b73c8;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.login a {
+    color: white;
+    text-decoration: none;
+}
+
+/* 검색 영역 스타일 */
+.search-section {
+    background-color: #ffffff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+    display: flex;
+    width: 60%;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #5b73c8;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    background-color: #5b73c8;
+    color: white;
+    border: 2px solid #5b73c8;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* 푸터 스타일 */
+.footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav li {
+        margin: 10px 0;
+    }
+
+    .search-box {
+        width: 80%;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news-section, .ads-section {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .logo a {
+        font-size: 20px;
+    }
+
+    .nav li {
+        margin: 5px 0;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-box input, .search-box button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .news-section h2, .ads-section h2 {
+        font-size: 16px;
+    }
+
+    .ad-box {
+        height: 100px;
+    }
+}
